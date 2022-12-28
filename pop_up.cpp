@@ -31,6 +31,9 @@ void pop_up::on_pushButton_clicked()
     QString type = ui->lineEdit->text();
     QString cost = ui->lineEdit_3->text();
     QString specs = ui->lineEdit_2->text();
+    type.replace(";",",").simplified();
+    cost.replace(";",",").simplified();
+    specs.replace(";",",").simplified();
     bool check = false;
     int x = cost.toInt(&check);
     if (!check) {
