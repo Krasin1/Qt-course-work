@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>70</y>
+      <width>1031</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1031</width>
+      <height>511</height>
+     </size>
+    </property>
+    <column>
+     <property name="text">
+      <string>Тип</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Цена</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Характеристики</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>20</y>
+      <width>521</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Minimum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Искать</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="new_bd"/>
+    <addaction name="open_bd"/>
+    <addaction name="save_bd"/>
+    <addaction name="save_as_bd"/>
+    <addaction name="close_bd"/>
+    <addaction name="separator"/>
+    <addaction name="exit_"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Редактировать</string>
+    </property>
+    <addaction name="edit_single_in_bd"/>
+    <addaction name="add_single_to_bd"/>
+    <addaction name="delete_some"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Вид</string>
+    </property>
+    <addaction name="search_in_bd"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+    <addaction name="help_and_tips"/>
+    <addaction name="author"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="new_bd"/>
+   <addaction name="open_bd"/>
+   <addaction name="save_bd"/>
+   <addaction name="save_as_bd"/>
+   <addaction name="close_bd"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="merge_bd"/>
+   <addaction name="add_single_to_bd"/>
+   <addaction name="edit_single_in_bd"/>
+   <addaction name="delete_some"/>
+  </widget>
+  <action name="new_bd">
+   <property name="text">
+    <string>Новая база данных</string>
+   </property>
+  </action>
+  <action name="open_bd">
+   <property name="text">
+    <string>Открыть базу данных</string>
+   </property>
+  </action>
+  <action name="save_bd">
+   <property name="text">
+    <string>Сохранить базу данных</string>
+   </property>
+  </action>
+  <action name="close_bd">
+   <property name="text">
+    <string>Закрыть базу данных</string>
+   </property>
+  </action>
+  <action name="exit_">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="help_and_tips">
+   <property name="text">
+    <string>Подсказки по командам</string>
+   </property>
+  </action>
+  <action name="author">
+   <property name="text">
+    <string>АФТОР!!!</string>
+   </property>
+  </action>
+  <action name="view_bd">
+   <property name="text">
+    <string>Просмотр б/д</string>
+   </property>
+  </action>
+  <action name="add_single_to_bd">
+   <property name="text">
+    <string>Добавить один элемент</string>
+   </property>
+  </action>
+  <action name="merge_bd">
+   <property name="text">
+    <string>Объеденить б/д</string>
+   </property>
+  </action>
+  <action name="edit_single_in_bd">
+   <property name="text">
+    <string>Изменить элемент</string>
+   </property>
+  </action>
+  <action name="search_in_bd">
+   <property name="text">
+    <string>Поиск данных</string>
+   </property>
+  </action>
+  <action name="save_as_bd">
+   <property name="text">
+    <string>Сохранить как</string>
+   </property>
+  </action>
+  <action name="delete_some">
+   <property name="text">
+    <string>Удалить выбранные</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
