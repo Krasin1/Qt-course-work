@@ -82,6 +82,7 @@ class Vector {
         std::copy(b, b + sz, array);
         delete[] b;
         cap *= 2;
+        array[sz] = d;
     }
 
     void push_front(const T &d) {
