@@ -74,9 +74,10 @@ void MainWindow::on_pushButton_clicked()
     ui->tableWidget->setSelectionMode(QAbstractItemView::SelectionMode::MultiSelection);
     auto find_items = ui->tableWidget->findItems(arg1, Qt::MatchContains);
     int len = find_items.size();
-    for (int i = 0; i < len; ++i) {
+    for (int i = 0; i < len; ++i) {:
         auto item = find_items.at(i);
-        ui->tableWidget->setItemSelected(item, true);
+        item->setSelected(true);
+        //ui->tableWidget->setItemSelected(item, true);  obsolete funciton
     }
     ui->tableWidget->setSelectionMode(QAbstractItemView::SelectionMode::SingleSelection);
     ui->statusbar->showMessage("Найдено " + QString::number(len) + " ячеек");
